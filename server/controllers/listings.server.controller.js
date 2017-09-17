@@ -76,7 +76,7 @@ exports.update = function(req, res) {
     }
     else{
       // send back the listing as a json from the request
-      res.json(req.listing);
+      res.json(listing);
     }
   });
 };
@@ -84,9 +84,6 @@ exports.update = function(req, res) {
 /* Delete a listing */
 exports.delete = function(req, res) {
   var listing = req.listing;
-
-  // Try capital .remove !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  console.log('listings: \n' + listing);
 
   /* Remove the article */
   Listing.remove(function(err){
